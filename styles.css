@@ -62,6 +62,277 @@ table {
     font-family: Playfair Display;
 }
 /* GLOBAL STYLES (mobile first/small) */
+*{
+	font-family: Playfair Display;
+}
+
+html{
+	background-color: var(--linen);
+	min-width: 300px;
+}
+
+p{
+	font-size: 1.15em;
+}
+
+h1{
+	color: var(--linen);
+	font-size: 4em;
+	font-weight: bold;
+}
+
+h2{
+	color: var(--midnight-blue);
+	font-size: 2em;
+	font-weight: bold;
+	padding-left: 10px;
+}
+
+h3{
+	font-size: 1.75em;
+	font-weight: bold;
+}
+
+header{
+	background-color: var(--midnight-blue);
+	text-align: center;
+}
+
+header > p{
+	color: var(--linen);
+	font-style: italic;
+	padding: 25px;
+}
+
+nav{
+	background-color: var(--champagne-gold);
+}
+
+nav > ul{
+	color: var(--midnight-blue);
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	padding: 10px;
+}
+
+li > a{
+	text-decoration: none;
+	color: var(--midnight-blue);
+	font-size: 1.5em;
+	font-weight: bold;
+}
+
+#welcome{
+	margin: 30px;
+	margin-top: 50px;
+	border-bottom: 3px solid var(--champagne-gold);
+}
+
+#welcome > p{
+	padding: 10px;
+	padding-bottom: 25px;
+	line-height: 1.25em;
+}
+
+#offerings{
+	margin: 30px;
+	border-bottom: 3px solid var(--champagne-gold);
+}
+
+#artisanprovs{
+	background-color: var(--olive-green);
+	border-radius: 10px;
+	color: var(--soft-white);
+	padding: 20px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.25);
+}
+
+#artisanprovs > h3{
+	margin-bottom: 10px;
+}
+
+#artisanprovs > p {
+	line-height: 1.25em;
+}
+
+#exclusiveexp{
+	background-color: var(--olive-green);
+	border-radius: 10px;
+	color: var(--soft-white);
+	padding: 20px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.25);
+}
+
+#exclusiveexp > h3{
+	margin-bottom: 10px;
+}
+
+#exclusiveexp > p {
+	line-height: 1.25em;
+}
+
+#monthlybasket{
+	background-color: var(--olive-green);
+	border-radius: 10px;
+	color: var(--soft-white);
+	padding: 20px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.25);
+}
+
+#monthlybasket > h3{
+	margin-bottom: 10px;
+}
+
+#monthlybasket > ul{
+	list-style: disc;
+	padding-left: 20px;
+	line-height: 1.5em;
+	padding-top: 5px;
+	padding-bottom: 3px;
+}
+
+#monthlybasket> p {
+	line-height: 1.25em;
+}
+
+#gallery{
+	margin: 30px;
+	border-bottom: 3px solid var(--champagne-gold);
+}
+
+#gallery > p{
+	padding: 10px;
+	padding-bottom: 25px;
+	line-height: 1.25em;
+}
+
+figure{
+	margin-bottom: 20px;
+	box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.25);
+	border-radius: 15px;
+}
+
+figure > img{
+	display: block;
+	margin: auto;
+	width: 100%;
+	border-radius: 15px;
+	border-bottom-left-radius: 0px;
+	border-bottom-right-radius: 0px;
+}
+figcaption{
+	background-color: var(--linen);
+	font-style: italic;
+	padding: 10px;
+	text-align: center;
+	border-bottom-left-radius: 15px;
+	border-bottom-right-radius: 15px;
+}
+
+#gallery > a{
+	display: block;
+	background-color: var(--olive-green);
+	text-decoration: none;
+	color: var(--linen);
+	font-weight: bold;
+	font-size: 1.2em;
+	text-align: center;
+	padding: 15px;
+	border-radius: 5px;
+	margin-bottom: 30px;
+}
+
+footer{
+	background-color: var(--midnight-blue);
+	padding: 50px;
+}
+
+#info{
+	margin: 30px;
+	color: var(--linen);
+	text-align: center;
+	line-height: 1.5em;
+}
+
+#info > a{
+	text-decoration: none;
+	color: var(--champagne-gold);
+	font-weight: bold;
+}
+
+#links{
+	margin: 30px;
+	text-align: center;
+	line-height: 1.5em;
+}
+
+#links > a{
+	text-decoration: none;
+	color: var(--champagne-gold);
+	font-weight: bold;
+}
 /* MEDIA QUERY (medium) */
+@media screen and (min-width: 600px) {
+	#offerings{
+		display: grid;
+		grid-template-areas: 
+			"heading heading"
+			"one two"
+			"three three";
+		grid-template-columns: 1fr 1fr;
+		gap: 20px;
+		row-gap: 0px;
+	}
+	#offerings > h1{
+		grid-area: heading;
+	}
+	#artisanprovs{
+		grid-area: one;
+	}
+	#exclusiveexp{
+		grid-area: two;
+	}
+	#monthlybasket{
+		grid-area: three;
+	}
+
+	#pictures{
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 20px;
+	}
+}
 /* MEDIA QUERY (large) */
+@media screen and (min-width: 900px) {
+	#pictures{
+		grid-template-columns: 1fr 1fr 1fr;
+	}
+}
 /* MEDIA QUERY (xl) */
+
+@media screen and (min-width: 1200px) {
+	#welcome{
+		margin-left: 15%;
+		margin-right: 15%;
+	}
+
+	#offerings{
+		margin-left: 15%;
+		margin-right: 15%;
+	}
+
+	#gallery{
+		margin-left: 15%;
+		margin-right: 15%;
+	}
+
+	#pictures{
+		grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+	}
+}
